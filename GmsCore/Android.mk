@@ -6,7 +6,7 @@ include $(CLEAR_VARS)
 LOCAL_MODULE := privapp-permissions-com.google.android.gms.xml
 LOCAL_MODULE_TAGS := optional
 LOCAL_MODULE_CLASS := ETC
-LOCAL_MODULE_PATH := $(TARGET_OUT_ETC)/permissions
+LOCAL_MODULE_PATH := $(TARGET_OUT_SYSTEM_EXT_ETC)/permissions
 LOCAL_SRC_FILES := $(LOCAL_MODULE)
 include $(BUILD_PREBUILT)
 
@@ -24,7 +24,7 @@ LOCAL_USES_LIBRARIES := com.android.location.provider
 LOCAL_OPTIONAL_USES_LIBRARIES := org.apache.http.legacy \
     androidx.window.extensions \
     androidx.window.sidecar
-    
+LOCAL_SYSTEM_EXT_MODULE := true
 include $(BUILD_PREBUILT)
 
 endif

@@ -16,5 +16,5 @@
 
 <permissions>
     <library name="com.google.android.maps"
-            file="/system/framework/com.google.android.maps.jar" />
+            file="/system_ext/framework/com.google.android.maps.jar" />
 </permissions>
