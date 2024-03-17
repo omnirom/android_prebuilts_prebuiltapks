@@ -1,0 +1,6 @@
+android_app_import {
+    name: "GsfProxy",
+    default_dev_cert: true,
+    system_ext_specific: true,
+    apk: "com.google.android.gsf-8.apk",
+}
