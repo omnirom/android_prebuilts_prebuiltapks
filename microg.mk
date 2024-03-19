@@ -2,7 +2,7 @@
 PRODUCT_PACKAGES += \
     AuroraStore \
     FakeStore \
-    GmsCore \
+    GmsCore_microg \
     GsfProxy \
     microg-a5k.xml
 

@@ -6,7 +6,7 @@ prebuilt_etc {
 }
 
 android_app_import {
-    name: "GmsCore",
+    name: "GmsCore_microg",
     privileged: true,
     certificate: "platform",
     overrides: ["com.qualcomm.location"],
