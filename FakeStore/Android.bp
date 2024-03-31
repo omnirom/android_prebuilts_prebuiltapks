@@ -12,4 +12,8 @@ android_app_import {
     required: ["privapp-permissions-com.android.vending.xml"],
     system_ext_specific: true,
     apk: "com.android.vending.apk",
+    optional_uses_libs: [
+        "androidx.window.extensions",
+        "androidx.window.sidecar",
+    ],
 }
