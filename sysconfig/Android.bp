@@ -1,6 +1,0 @@
-prebuilt_etc {
-    name: "microg-a5k.xml",
-    src: "microg-a5k.xml",
-    relative_install_path: "sysconfig",
-    system_ext_specific: true,
-}

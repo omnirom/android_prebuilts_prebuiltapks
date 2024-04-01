@@ -1,8 +1,9 @@
-# Product priv-app
+PRODUCT_SOONG_NAMESPACES += \
+    vendor/microg
+
 PRODUCT_PACKAGES += \
     AuroraStore \
     FakeStore \
-    GmsCore_microg \
+    GmsCore \
     GsfProxy \
     microg-a5k.xml
-

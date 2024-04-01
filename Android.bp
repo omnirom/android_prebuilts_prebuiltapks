@@ -1,0 +1,75 @@
+soong_namespace {
+}
+
+android_app_import {
+    name: "AuroraStore",
+    dex_preopt: {
+        enabled: false,
+    },
+    system_ext_specific: true,
+    optional_uses_libs: [
+        "androidx.window.extensions",
+        "androidx.window.sidecar",
+    ],
+    apk: "AuroraStore/AuroraStore_4.3.3.apk",
+    presigned: true,
+    preprocessed: true,
+}
+
+prebuilt_etc {
+    name: "privapp-permissions-com.android.vending.xml",
+    src: "FakeStore/privapp-permissions-com.android.vending.xml",
+    relative_install_path: "permissions",
+    system_ext_specific: true,
+}
+
+android_app_import {
+    name: "FakeStore",
+    privileged: true,
+    default_dev_cert: true,
+    required: ["privapp-permissions-com.android.vending.xml"],
+    system_ext_specific: true,
+    apk: "FakeStore/com.android.vending.apk",
+    optional_uses_libs: [
+        "androidx.window.extensions",
+        "androidx.window.sidecar",
+    ],
+}
+
+prebuilt_etc {
+    name: "privapp-permissions-com.google.android.gms.xml",
+    src: "GmsCore/privapp-permissions-com.google.android.gms.xml",
+    relative_install_path: "permissions",
+    system_ext_specific: true,
+}
+
+android_app_import {
+    name: "GmsCore",
+    privileged: true,
+    certificate: "platform",
+    overrides: ["com.qualcomm.location"],
+    required: ["privapp-permissions-com.google.android.gms.xml"],
+    uses_libs: ["com.android.location.provider"],
+    optional_uses_libs: [
+        "org.apache.http.legacy",
+        "androidx.window.extensions",
+        "androidx.window.sidecar",
+    ],
+    system_ext_specific: true,
+    apk: "GmsCore/com.google.android.gms.apk",
+}
+
+android_app_import {
+    name: "GsfProxy",
+    default_dev_cert: true,
+    system_ext_specific: true,
+    apk: "GsfProxy/com.google.android.gsf-8.apk",
+}
+
+prebuilt_etc {
+    name: "microg-a5k.xml",
+    src: "sysconfig/microg-a5k.xml",
+    relative_install_path: "sysconfig",
+    system_ext_specific: true,
+}
+
