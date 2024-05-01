@@ -26,7 +26,7 @@ prebuilt_etc {
 android_app_import {
     name: "FakeStore",
     privileged: true,
-    default_dev_cert: true,
+    certificate: "platform",
     required: ["privapp-permissions-com.android.vending.xml"],
     system_ext_specific: true,
     apk: "FakeStore/com.android.vending.apk",
