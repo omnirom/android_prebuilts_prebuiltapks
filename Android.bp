@@ -11,9 +11,10 @@ android_app_import {
         "androidx.window.extensions",
         "androidx.window.sidecar",
     ],
-    apk: "AuroraStore/AuroraStore_4.3.3.apk",
+    apk: "AuroraStore/AuroraStore-4.7.4.apk",
     presigned: true,
     preprocessed: true,
+    skip_preprocessed_apk_checks: true,
 }
 
 prebuilt_etc {
